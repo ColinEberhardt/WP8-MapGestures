@@ -1,0 +1,50 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="MultiTouchMap.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    xmlns:util="clr-namespace:Util"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+  <!--LayoutRoot is the root grid where all page content is placed-->
+  <Grid>
+    <maps:Map x:Name="map" Margin="20"
+              LandmarksEnabled="True"
+              ZoomLevel="14"
+              CartographicMode="Road"
+              Center="40.76,-73.98">
+    </maps:Map>
+
+    <Border Background="#888888ff" Margin="50" Padding="5"
+            VerticalAlignment="Top"
+            BorderBrush="LightGray" BorderThickness="3" CornerRadius="5">
+      <Grid util:GridUtils.RowDefinitions="30,30, 30"
+            util:GridUtils.ColumnDefinitions="*,*,*,*">
+        <TextBlock Text="Latitude"/>
+        <TextBlock Text="Longitude" Grid.Row="1"/>
+        <TextBlock Text="Zoom" Grid.Row="2"/>
+
+        <TextBlock x:Name="latText" Grid.Column="1"/>
+        <TextBlock x:Name="longText" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock x:Name="zoomText" Grid.Row="2" Grid.Column="1"/>
+
+        <TextBlock Text="Heading"  Grid.Column="2"/>
+        <TextBlock Text="Pitch" Grid.Row="1"  Grid.Column="2"/>
+
+        <TextBlock x:Name="headingText" Grid.Column="3"/>
+        <TextBlock x:Name="pitchText" Grid.Row="1" Grid.Column="3"/>
+      </Grid>
+    </Border>
+
+  </Grid>
+
+</phone:PhoneApplicationPage>
