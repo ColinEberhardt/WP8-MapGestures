@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{6bcc8229-42a5-47b0-a846-8ff9ce442ced}" Title="MultiTouchMap" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="MultiTouchMap author" Description="Sample description" Publisher="MultiTouchMap" PublisherID="{1cd91b6f-7cea-45a8-8fe1-f592c632b8fe}">
+  <App xmlns="" ProductID="{6bcc8229-42a5-47b0-a846-8ff9ce442ced}" Title="MultiTouchMap" RuntimeType="Silverlight"
+       Version="1.0.0.0" Genre="apps.normal" Author="MultiTouchMap author" Description="Sample description"
+       Publisher="MultiTouchMap" PublisherID="{1cd91b6f-7cea-45a8-8fe1-f592c632b8fe}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
